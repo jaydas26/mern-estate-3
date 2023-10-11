@@ -18,8 +18,13 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     // Additional validation rules can be added here
-  }
-}, { timestamps: true });
+  },
+  avatar:{
+    type: String,
+    default: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+  },
+},
+ { timestamps: true });
 
 // Create the User model
 const User = mongoose.model('User', userSchema);
